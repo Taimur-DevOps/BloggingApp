@@ -1,11 +1,8 @@
+import React from 'react';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Layout } from '@/components/layout';
 import { Poppins, Inter } from 'next/font/google';
-import { ReactNode } from 'react';
-
-// const inter = Inter({ subsets: ['latin'] });
-
 
 // Configure the primary font (Poppins)
 const poppins = Poppins({
@@ -29,11 +26,7 @@ export const metadata = {
   description: 'A modern blog platform',
 };
 
-type RootLayoutProps = {
-  children: ReactNode;
-};
-
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
